@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -23,6 +23,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTL-qJ-ouk"/>
                                     <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="un5-UN-x7U"/>
                                 </connections>
                             </button>
@@ -53,19 +54,41 @@
                             <constraint firstItem="zS7-DZ-eec" firstAttribute="top" secondItem="WRW-Un-Sc0" secondAttribute="bottom" constant="30" id="lRA-MC-Wwz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u2E-om-FyU"/>
                     <connections>
+                        <outlet property="label" destination="cSX-PV-RlH" id="dcq-xr-KEX"/>
                         <outlet property="mySlider" destination="WRW-Un-Sc0" id="8Xz-Bm-OGY"/>
                         <outlet property="numberLabel" destination="cSX-PV-RlH" id="wwX-zV-5KN"/>
+                        <outlet property="slider" destination="WRW-Un-Sc0" id="9bY-I2-MI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="5"/>
+            <point key="canvasLocation" x="950" y="9"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="88r-pl-KbT">
+            <objects>
+                <viewController id="Jz8-yH-3gJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vPS-8x-K2l">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Rvz-B7-s3L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iJN-yb-ryN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmK-LT-hV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="203"/>
         </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
